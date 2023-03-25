@@ -12,6 +12,7 @@ import glob
 @click.option(
     "--ftype", prompt="Pass in the type of file", help="Pass in the file type: i.e csv"
 )
+
 def search(path, ftype):
     results = glob.glob(f"{path}/*.{ftype}")
     click.echo(click.style("Found matches", fg="red"))
